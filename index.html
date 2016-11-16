@@ -9,6 +9,28 @@
   </head>
   <body ng-controller='mainCtrl'>
 
+    <div class="header">
+      <h2 class="title">Quotes</h2>
+
+      <input class="" placeholder="Search for Quote" ng-model="quotes.text">
+      <input class="" placeholder="Search for Author" ng-model="quotes.author">
+
+    </div>
+
+    <div class="quoteBlocks" ng-repeat="quote in quotes | filter: quotes.text | filter: quotes.author">
+      <p class="actualQuote">{{quote.text}}</p>
+      <p class="author">-{{quote.author}}</p>
+      <button class="deleteButton" type="button" name="button" ng-click="removeQuote($index)">X</button>
+      <br>
+    </div>
+
+    <div class="newQuote">
+      <form class="" method="post" ng-submit="addQuote(addText, addAuthor)">
+        <input type="text" name="name" value="" placeholder="Add Quote" ng-model="addText">
+        <input type="text" name="name" value="" placeholder="Add Author" ng-model="addAuthor">
+        <input type="submit" name="name" value="Submit" >
+      </form>
+    </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>

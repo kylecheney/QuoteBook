@@ -1,0 +1,39 @@
+body {
+  background-color: #f1f8e9;
+  flex: auto;
+}
+
+.header {
+  height: 10vh;
+  background-color: #00897b;
+}
+
+.title {
+  color: white;
+}
+
+.actualQuote {
+  font-family: cursive;
+}
+
+.author {
+  font-family: cursive;
+}
+
+.quoteBlocks {
+  margin:5%;
+  justify-content: center;
+  align-items: center;
+}
+
+.newQuote {
+  margin: 3%;
+}
+
+.deleteButton {
+  float: right;
+  height: 2vh;
+  width: 2vw;
+  background-color: red;
+  color: white;
+}
